@@ -1,0 +1,50 @@
+.character-card{
+    background-color: #fafafa;
+    border-radius: 6px;
+    color: #252525;
+    position: relative;
+}
+
+.character-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.character-container{
+    padding: 10px;
+}
+
+.character-name {
+    font-weight: bold;
+}
+
+.character-location {
+    padding-top: 15px;
+}
+
+.character-location small {
+    color: gray;
+}
+
+.character-status {
+    border-radius: 0.25rem;
+    color: #fafafa;
+    line-height: 1;
+    padding: 0.35em 0.65em;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.alive {
+    background-color: #198754;
+}
+
+.dead {
+    background-color: #dc3545;
+}
+
+.unknown {
+    background-color: #6c757d;
+}

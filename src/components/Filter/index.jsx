@@ -1,9 +1,7 @@
-import React from 'react';
-
-const index = () => {
+const Filter = () => {
   return (
-    <div>index</div>
+    <div>Filter</div>
   )
 }
 
-export default index;
+export default Filter;

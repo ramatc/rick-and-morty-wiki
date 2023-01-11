@@ -1,0 +1,18 @@
+.characters {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            200px,
+            1fr
+        )
+    );
+
+    gap: 32px;
+}
+
+@media (min-width: 1200px) {
+    .characters {
+        gap: 26px;
+    }
+}

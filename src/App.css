@@ -1,0 +1,10 @@
+h1 {
+    background: -webkit-linear-gradient(#42A341, #B8E2A3, #074C00);
+    background-clip: text;
+    font-family: Shlop;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    padding: 20px 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
