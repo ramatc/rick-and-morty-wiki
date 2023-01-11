@@ -4,7 +4,7 @@ const CharacterCard = ({ image, name, status, location }) => {
 
     return (
         <div className='character-card'>
-            <img src={image} alt={name} className='character-img'/>
+            <img src={image} alt={name} className='character-img' />
             <div className='character-container'>
                 <p className='character-name'>{name}</p>
 

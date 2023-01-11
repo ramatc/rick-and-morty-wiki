@@ -5,8 +5,8 @@ const CharacterList = ({ characters }) => {
 
     return (
         <div className='characters'>
-            {characters 
-                ? characters.map(character => <Character {...character} key={character.id}/>) 
+            {characters
+                ? characters.map(character => <Character {...character} key={character.id} />)
                 : 'No Characters Found :('
             }
         </div>

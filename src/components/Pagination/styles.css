@@ -1,0 +1,27 @@
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px;
+}
+
+li{
+    height: 36px;
+    list-style: none;
+    text-align: center;
+    font-size: 22px;
+}
+
+.prev, .next, .break, .page-item a{
+    cursor: pointer;
+}
+
+.active{
+    font-weight: bold;
+    color: #198754;
+    border-bottom: 1px solid #198754;
+}
+
+.disabled{
+    font-weight: lighter;
+    cursor: not-allowed;
+}
