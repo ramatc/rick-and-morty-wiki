@@ -9,8 +9,10 @@ const Search = ({ setSearch, setPageNumber }) => {
     return (
         <form onSubmit={handleSubmit}>
             <input
-                onChange={(e) => setSearch(e.target.value)}
-                onClick={() => setPageNumber(1)}
+                onChange={(e) => {
+                    setSearch(e.target.value);
+                    setPageNumber(1);
+                }}
                 placeholder='Search for characters'
                 type='text'
             />
