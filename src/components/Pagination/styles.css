@@ -5,7 +5,6 @@
 }
 
 li{
-    height: 36px;
     list-style: none;
     text-align: center;
     font-size: 22px;
@@ -17,8 +16,8 @@ li{
 
 .active{
     font-weight: bold;
-    color: #198754;
-    border-bottom: 1px solid #198754;
+    color: #40b5cb;
+    border-bottom: 1px solid #40b5cb;
 }
 
 .disabled{

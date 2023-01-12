@@ -9,7 +9,7 @@ const CharacterCard = ({ image, name, status, location }) => {
                 <p className='character-name'>{name}</p>
 
                 <div className='character-location'>
-                    <small className="">Last Location:</small>
+                    <small className="">Last know location:</small>
                     <p className="fs-5">{location.name}</p>
                 </div>
 

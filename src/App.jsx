@@ -1,13 +1,20 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import CharacterListContainer from './components/CharacterListContainer';
 import './App.css';
 
 const App = () => {
     return (
-        <>
-            <NavBar/>
-            <CharacterListContainer/>
-        </>
+        <BrowserRouter>
+            <NavBar />
+            <Routes >
+                <Route
+                    path="/"
+                    exact
+                    element={<CharacterListContainer />}
+                />
+            </Routes>
+        </BrowserRouter >
     )
 }
 
