@@ -1,7 +1,7 @@
 .pagination{
     display: flex;
     justify-content: space-between;
-    padding: 50px 0px;
+    padding: 25px 0px;
 }
 
 li{
