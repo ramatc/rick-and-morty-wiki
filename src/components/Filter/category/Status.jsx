@@ -1,16 +1,17 @@
-const Status = ({ setFilters, setPageNumber, gender, species }) => {
+const Status = ({ setFilters, setPageNumber, status, gender, species }) => {
 
-    const status = ['alive', 'dead', 'unknown'];
+    const statusList = ['alive', 'dead', 'unknown'];
 
     return (
         <div className='filters-containers'>
-            {status.map(stat =>
+            {statusList.map(stat =>
                 <button
                     key={stat}
                     onClick={() => {
                         setFilters({ status: stat, gender: gender, species: species });
                         setPageNumber(1);
                     }}
+                    className={stat === status ? 'active-filter' : ''}
                 >
                     {stat}
                 </button>

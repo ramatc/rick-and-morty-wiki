@@ -1,9 +1,14 @@
-.filters{
+.filters {
     display: flex;
     flex-wrap: wrap;
 }
 
-.filters-containers{
+.filters-containers {
     width: 100%;
     padding: 15px 0px;
+}
+
+.active-filter {
+    background-color: green;
+    color: white;
 }

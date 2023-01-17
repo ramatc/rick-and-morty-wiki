@@ -1,17 +1,18 @@
-const Species = ({ setFilters, setPageNumber, status, gender }) => {
+const Species = ({ setFilters, setPageNumber, status, gender, species }) => {
 
-    const species = ['Human', 'Alien', 'Humanoid', 'Poopybutthole', 'Mythological',
+    const speciesList = ['Human', 'Alien', 'Humanoid', 'Poopybutthole', 'Mythological',
         'Unknown', 'Animal', 'Disease', 'Robot', 'Cronenberg', 'Planet'];
 
     return (
         <div className='filters-containers'>
-            {species.map(specie =>
+            {speciesList.map(specie =>
                 <button
                     key={specie}
                     onClick={() => {
                         setFilters({ status: status, gender: gender, species: specie });
                         setPageNumber(1);
                     }}
+                    className={specie === species ? 'active-filter' : ''}
                 >
                     {specie}
                 </button>

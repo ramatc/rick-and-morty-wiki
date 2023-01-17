@@ -1,18 +1,19 @@
-const Gender = ({ setFilters, setPageNumber, status, species }) => {
+const Gender = ({ setFilters, setPageNumber, status, gender, species }) => {
 
-    const genders = ['female', 'male', 'genderless', 'unknown'];
+    const gendersList = ['female', 'male', 'genderless', 'unknown'];
 
     return (
         <div className='filters-containers'>
-            {genders.map(gender =>
+            {gendersList.map(genderItem =>
                 <button
-                    key={gender}
+                    key={genderItem}
                     onClick={() => {
-                        setFilters({ status: status, gender: gender, species: species });
+                        setFilters({ status: status, gender: genderItem, species: species });
                         setPageNumber(1);
                     }}
+                    className={genderItem === gender ? 'active-filter' : ''}
                 >
-                    {gender}
+                    {genderItem}
                 </button>
             )}
         </div>
