@@ -9,7 +9,7 @@ const App = () => {
             <NavBar />
             <Routes >
                 <Route
-                    path="/"
+                    path='/'
                     exact
                     element={<CharacterListContainer />}
                 />

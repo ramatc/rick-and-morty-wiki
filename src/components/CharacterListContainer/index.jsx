@@ -3,6 +3,7 @@ import CharacterList from '../CharacterList';
 import Search from '../Search/';
 import Pagination from '../Pagination';
 import Filter from '../Filter';
+import Loader from '../Loader';
 import { getAllCharacters } from '../../services/getAllCharacters';
 import './styles.css';
 
@@ -30,7 +31,6 @@ const CharacterListContainer = () => {
         <div className='main-container'>
             <h1>Characters</h1>
             <Filter
-                pageNumber={pageNumber}
                 filters={filters}
                 setFilters={setFilters}
                 setPageNumber={setPageNumber}
@@ -44,7 +44,7 @@ const CharacterListContainer = () => {
                 pageNumber={pageNumber}
                 setPageNumber={setPageNumber}
             />
-            {loading ? 'Loading...' : <CharacterList characters={results} />}
+            {loading ? <Loader /> : <CharacterList characters={results} />}
         </div>
     );
 };

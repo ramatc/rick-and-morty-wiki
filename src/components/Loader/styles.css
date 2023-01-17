@@ -1,0 +1,39 @@
+.loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    margin: 0 auto;
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+}
+
+.loader::before {
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(0deg,
+        #B8E2A3 0%,
+        #42A341 50%,
+        #074C00 100%
+    );
+}
+
+.loader::after {
+    width: 85%;
+    height: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

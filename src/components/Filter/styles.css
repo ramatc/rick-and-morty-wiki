@@ -1,0 +1,9 @@
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filters-containers{
+    width: 100%;
+    padding: 15px 0px;
+}
