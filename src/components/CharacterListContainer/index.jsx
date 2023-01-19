@@ -30,6 +30,7 @@ const CharacterListContainer = () => {
     return (
         <div className='main-container'>
             <h1>Characters</h1>
+
             <Filter
                 filters={filters}
                 setFilters={setFilters}
@@ -44,6 +45,7 @@ const CharacterListContainer = () => {
                 pageNumber={pageNumber}
                 setPageNumber={setPageNumber}
             />
+
             {loading ? <Loader /> : <CharacterList characters={results} />}
         </div>
     );

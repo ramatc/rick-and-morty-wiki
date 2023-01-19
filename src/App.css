@@ -8,3 +8,12 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.characters-episodes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.characters-episodes div {
+    width: 100px;
+}
