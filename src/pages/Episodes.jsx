@@ -26,18 +26,14 @@ const Episodes = () => {
     return (
         <div>
             <div>
-                <h2>
-                    Episode name: <span>{name === "" ? "Unknown" : name} - {episode}</span>
-                </h2>
-
-                <h4>
-                    Air Date: {air_date === "" ? "Unknown" : air_date}
-                </h4>
+                <h2>Episode name: <span>{name === '' ? 'Unknown' : name} - {episode}</span></h2>
+                <h4>Air Date: {air_date === '' ? 'Unknown' : air_date}</h4>
             </div>
 
             <div>
                 <div>
                     <h5>Pick Episode</h5>
+                    {/* TOTAL HARDCODEADO Y LOADING */}
                     <InputGroup name='Episode' setId={setId} total={51} />
                 </div>
 
