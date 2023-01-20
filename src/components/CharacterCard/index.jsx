@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
-const CharacterCard = ({ image, name, species, status, location }) => {
+const CharacterCard = ({ id, image, name, species, status, location }) => {
 
     return (
-        <div className='character-card'>
+        <Link to={`/character/${id}`} className='character-card'>
             <img src={image} alt={name} className='character-img' />
             <div className='character-container'>
                 <p className='character-name'>{name}</p>
@@ -18,7 +19,7 @@ const CharacterCard = ({ image, name, species, status, location }) => {
                     {status.toLowerCase()}
                 </p>
             </div>
-        </div>
+        </Link>
     )
 }
 

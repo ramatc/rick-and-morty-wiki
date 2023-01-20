@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import CharacterListContainer from './components/CharacterListContainer';
 import Episodes from './pages/Episodes';
 import Locations from './pages/Locations';
+import CharacterDetail from './components/CharacterDetail';
 import './App.css';
 
 const App = () => {
@@ -26,6 +27,12 @@ const App = () => {
                     path='/locations'
                     exact
                     element={<Locations />}
+                />
+
+                <Route
+                    path='/character/:id'
+                    exact
+                    element={<CharacterDetail />}
                 />
             </Routes>
         </BrowserRouter >
