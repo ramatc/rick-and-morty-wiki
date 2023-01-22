@@ -1,14 +1,26 @@
-.character-card{
+.character-card {
     background-color: #fafafa;
+    border: none;
     border-radius: 6px;
+    box-shadow: 0 1px 7px rgba(0,0,0,.05);
     color: #252525;
     position: relative;
+    text-decoration: none;
+    transition: all 100ms ease-in-out;
+    -webkit-box-shadow: 0 1px 7px rgba(0,0,0,.05);
+    -webkit-transition: all 100ms ease-in-out;
+}
+
+.character-card:hover {
+    border: none;
+    transform: scale(1.04);
 }
 
 .character-img {
     width: 100%;
     height: auto;
-    border-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .character-container{
