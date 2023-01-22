@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCharacterById } from '../../services/getCharacterById';
+import Loader from '../Loader';
 
 const CharacterDetail = () => {
 
@@ -24,8 +25,8 @@ const CharacterDetail = () => {
     return (
         <>
             {loading
-                ? 'Loading...'
-                : <div>
+                ? <Loader />
+                : <main className='main-container'>
                     <h1>{name}</h1>
                     <img src={image} alt={name} />
 
@@ -37,7 +38,7 @@ const CharacterDetail = () => {
                         <p>Origin: {origin?.name}</p>
                         <p>Status: {status}</p>
                     </div>
-                </div>
+                </main>
             }
         </>
     )

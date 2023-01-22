@@ -1,5 +1,23 @@
 .main-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 50px;
+}
+
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.w-20 {
+    border: 1px solid white;
+    border-radius: 9px;
+    height: 100%;
+    padding: 9px;
+    width: 20%;
+}
+
+.w-75 {
+    width: 75%;
 }

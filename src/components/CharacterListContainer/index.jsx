@@ -28,25 +28,30 @@ const CharacterListContainer = () => {
     const { info, results } = characters;
 
     return (
-        <main className='main-container'>
-            <h1>Characters</h1>
+        <main className='main-container rows'>
+            <div className='w-75'>
+                <h1>Characters</h1>
 
-            <Filter
-                filters={filters}
-                setFilters={setFilters}
-                setPageNumber={setPageNumber}
-            />
-            <Search
-                setSearch={setSearch}
-                setPageNumber={setPageNumber}
-            />
-            <Pagination
-                info={info}
-                pageNumber={pageNumber}
-                setPageNumber={setPageNumber}
-            />
+                <Search
+                    setSearch={setSearch}
+                    setPageNumber={setPageNumber}
+                />
+                <Pagination
+                    info={info}
+                    pageNumber={pageNumber}
+                    setPageNumber={setPageNumber}
+                />
 
-            {loading ? <Loader /> : <CharacterList characters={results} />}
+                {loading ? <Loader /> : <CharacterList characters={results} />}
+            </div>
+
+            <div className='w-20'>
+                <Filter
+                    filters={filters}
+                    setFilters={setFilters}
+                    setPageNumber={setPageNumber}
+                />
+            </div>
         </main>
     );
 };

@@ -12,9 +12,7 @@ const Filter = ({ filters, setFilters, setPageNumber }) => {
 
     return (
         <>
-            <h2>Filter</h2>
-
-            <button onClick={handleClear}>Clear filters</button>
+            <h2>Filters</h2>
 
             <div className='filters'>
                 <Status
@@ -33,6 +31,13 @@ const Filter = ({ filters, setFilters, setPageNumber }) => {
                     {...filters}
                 />
             </div>
+
+            <button
+                onClick={handleClear}
+                className='btn-clear'
+            >
+                Clear filters
+            </button>
         </>
     )
 }

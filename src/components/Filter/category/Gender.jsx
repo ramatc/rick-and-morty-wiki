@@ -3,7 +3,8 @@ const Gender = ({ setFilters, setPageNumber, status, gender, species }) => {
     const gendersList = ['female', 'male', 'genderless', 'unknown'];
 
     return (
-        <div className='filters-containers'>
+        <div className='filters-container'>
+            <h3>Gender:</h3>
             {gendersList.map(genderItem =>
                 <button
                     key={genderItem}

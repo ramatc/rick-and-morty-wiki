@@ -4,7 +4,8 @@ const Species = ({ setFilters, setPageNumber, status, gender, species }) => {
         'Unknown', 'Animal', 'Disease', 'Robot', 'Cronenberg', 'Planet'];
 
     return (
-        <div className='filters-containers'>
+        <div className='filters-container'>
+            <h3>Species:</h3>
             {speciesList.map(specie =>
                 <button
                     key={specie}

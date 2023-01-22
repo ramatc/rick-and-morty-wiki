@@ -3,7 +3,8 @@ const Status = ({ setFilters, setPageNumber, status, gender, species }) => {
     const statusList = ['alive', 'dead', 'unknown'];
 
     return (
-        <div className='filters-containers'>
+        <div className='filters-container'>
+            <h3>Status:</h3>
             {statusList.map(stat =>
                 <button
                     key={stat}
