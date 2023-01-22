@@ -14,3 +14,12 @@ export const getEpisodeById = async (id) => {
 
     return response;
 }
+
+export const getEpisodeCount = async () => {
+
+    const API_KEY = `https://rickandmortyapi.com/api/episode`;
+    const resp = await fetch(API_KEY);
+    const data = await resp.json();
+
+    return data.info.count;
+}

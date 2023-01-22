@@ -28,7 +28,7 @@ const CharacterListContainer = () => {
     const { info, results } = characters;
 
     return (
-        <div className='main-container'>
+        <main className='main-container'>
             <h1>Characters</h1>
 
             <Filter
@@ -47,7 +47,7 @@ const CharacterListContainer = () => {
             />
 
             {loading ? <Loader /> : <CharacterList characters={results} />}
-        </div>
+        </main>
     );
 };
 
