@@ -3,7 +3,7 @@ Una aplicación web creada con React para poder visualizar todos los personajes,
 
 La información se obtiene a través de un llamado a la API de [Rick and Morty](https://rickandmortyapi.com/)
 
-![Rick and Morty Wiki](https://user-images.githubusercontent.com/75765676/211926064-2e7bff46-2a41-426a-825d-af7f989b5215.jpg)
+![Rick and Morty Wiki](https://user-images.githubusercontent.com/75765676/214170415-3ae8c1af-8812-4ac7-b439-fb5ba7912a0b.png)
 
 <!-- ## ¿Puedo verlo en vivo?
 Puedes visitar la versión en vivo haciendo click en el siguiente enlace:\
