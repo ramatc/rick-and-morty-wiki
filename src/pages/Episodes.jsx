@@ -47,7 +47,7 @@ const Episodes = () => {
                             </div>
 
                             <div>
-                                <div className='characters-episodes'>
+                                <div className='characters'>
                                     {episodeCharacters.length > 0
                                         ? episodeCharacters.map(character => <Character {...character} key={character.id} />)
                                         : 'No Characters Found :('

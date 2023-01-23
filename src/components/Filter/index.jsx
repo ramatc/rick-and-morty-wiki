@@ -12,7 +12,7 @@ const Filter = ({ filters, setFilters, setPageNumber }) => {
 
     return (
         <>
-            <h2>Filters</h2>
+            <h2 className='filter-title'>Filters</h2>
 
             <div className='filters'>
                 <Status

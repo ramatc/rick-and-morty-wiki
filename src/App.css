@@ -1,14 +1,3 @@
 h1 {
-    font-size: 50px;
-    letter-spacing: 1.5px;
     padding-bottom: 20px;
-}
-
-.characters-episodes {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.characters-episodes div {
-    width: 100px;
 }

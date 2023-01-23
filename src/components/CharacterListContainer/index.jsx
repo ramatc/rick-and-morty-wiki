@@ -7,6 +7,15 @@ import Loader from '../Loader';
 import { getAllCharacters } from '../../services/getAllCharacters';
 import './styles.css';
 
+/* TODO:
+    1- RESPONSIVE
+    2- STYLES EPISODES
+    3- STYLES LOCATIONS
+    4- STYLES CHAR DETAIL 
+    5- README (FOTO Y LINK)
+    6- LOADER
+*/
+
 const CharacterListContainer = () => {
     const [characters, setCharacters] = useState([]);
     const [loading, setLoading] = useState(true);

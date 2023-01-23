@@ -11,11 +11,13 @@
 }
 
 .w-20 {
-    border: 1px solid white;
-    border-radius: 9px;
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
     height: 100%;
-    padding: 9px;
+    padding: 10px 15px;
     width: 20%;
+    background-color: #17c3b227;
+    box-shadow: 0 0.1rem 0.8rem #000000;
 }
 
 .w-75 {

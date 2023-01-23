@@ -48,7 +48,7 @@ const Locations = () => {
                             </div>
 
                             <div>
-                                <div className='characters-episodes'>
+                                <div className='characters'>
                                     {locationCharacters.length > 0
                                         ? locationCharacters.map(character => <Character {...character} key={character.id} />)
                                         : 'No Characters Found :('
