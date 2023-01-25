@@ -35,8 +35,8 @@ O enviarme un mensaje en LinkedIn: https://www.linkedin.com/in/ramiro-tanquias/
 <!-- 
     TODO:
         1- RESPONSIVE
-        2- STYLES EPISODES
-        3- STYLES LOCATIONS
-        4- STYLES CHAR DETAIL 
-        5- LOADER
+        2- UN SOLO PERSONAJE APARECE
+        3- STYLES CHAR DETAIL 
+        4- LOADER
+        5- NO CHARACTER FOUND
 -->

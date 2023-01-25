@@ -35,25 +35,26 @@ const Locations = () => {
                 loading
                     ? <Loader />
                     : <>
-                        <div className='info-container'>
-                            <h2>Location: <span>{name === '' ? 'Unknown' : name}</span></h2>
-                            <h3>Dimension: <span>{dimension === '' ? 'Unknown' : dimension}</span></h3>
-                            <h3>Type: <span>{type === '' ? 'Unknown' : type}</span></h3>
-                        </div>
+                        <div className='page-container'>
+                            <div className='info-container'>
+                                <h2>Location: <span>{name === '' ? 'Unknown' : name}</span></h2>
+                                <h3>Dimension: <span>{dimension === '' ? 'Unknown' : dimension}</span></h3>
+                                <h3>Type: <span>{type === '' ? 'Unknown' : type}</span></h3>
+                            </div>
 
-                        <div>
-                            <div>
-                                <p>Pick Location</p>
+                            <div className='pick-container'>
+                                <p>Pick Location:</p>
                                 <InputGroup name='Location' setId={setNumber} total={total} />
                             </div>
-
-                            <div className='characters'>
-                                {locationCharacters.length > 0
-                                    ? locationCharacters.map(character => <Character {...character} key={character.id} />)
-                                    : 'No Characters Found :('
-                                }
-                            </div>
                         </div>
+
+                        <div className='characters'>
+                            {locationCharacters.length > 0
+                                ? locationCharacters.map(character => <Character {...character} key={character.id} />)
+                                : 'No Characters Found :('
+                            }
+                        </div>
+
                     </>
             }
         </main>

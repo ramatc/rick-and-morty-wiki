@@ -1,7 +1,16 @@
+.page-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
 .info-container {
     text-align: center;
     color: rgba(255, 255, 255, 0.805);
     font-size: 1.4rem;
+    padding: 0px 15px;
+    border-right: 2px solid #fafafa;
 }
 
 .info-container span {
@@ -10,4 +19,25 @@
 
 .info-container h2 span {
     color: #1cc49d;
+}
+
+.pick-container {
+    padding: 0px 15px;
+}
+
+.pick-container p{
+    font-size: 27px;
+}
+
+select {
+    background-color: #1cc49d;
+    border: none;
+    border-radius: 6px;
+    color: #fafafa;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 16px;
 }

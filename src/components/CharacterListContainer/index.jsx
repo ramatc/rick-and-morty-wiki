@@ -36,13 +36,24 @@ const CharacterListContainer = () => {
                     setSearch={setSearch}
                     setPageNumber={setPageNumber}
                 />
+
                 <Pagination
                     info={info}
                     pageNumber={pageNumber}
                     setPageNumber={setPageNumber}
                 />
 
-                {loading ? <Loader /> : <CharacterList characters={results} />}
+                {loading
+                    ? <Loader />
+                    : <>
+                        <CharacterList characters={results} />
+                        <Pagination
+                            info={info}
+                            pageNumber={pageNumber}
+                            setPageNumber={setPageNumber}
+                        />
+                    </>
+                }
             </div>
 
             <div className='w-20'>

@@ -35,23 +35,23 @@ const Episodes = () => {
                 loading
                     ? <Loader />
                     : <>
-                        <div className='info-container'>
-                            <h2>Episode name: <span>{name === '' ? 'Unknown' : name} - {episode}</span></h2>
-                            <h3>Air Date: <span>{air_date === '' ? 'Unknown' : air_date}</span></h3>
-                        </div>
+                        <div className='page-container'>
+                            <div className='info-container'>
+                                <h2>Episode name: <span>{name === '' ? 'Unknown' : name} - {episode}</span></h2>
+                                <h3>Air Date: <span>{air_date === '' ? 'Unknown' : air_date}</span></h3>
+                            </div>
 
-                        <div>
-                            <div>
-                                <p>Pick Episode</p>
+                            <div className='pick-container'>
+                                <p>Pick Episode:</p>
                                 <InputGroup name='Episode' setId={setId} total={total} />
                             </div>
+                        </div>
 
-                            <div className='characters'>
-                                {episodeCharacters.length > 0
-                                    ? episodeCharacters.map(character => <Character {...character} key={character.id} />)
-                                    : 'No Characters Found :('
-                                }
-                            </div>
+                        <div className='characters'>
+                            {episodeCharacters.length > 0
+                                ? episodeCharacters.map(character => <Character {...character} key={character.id} />)
+                                : 'No Characters Found :('
+                            }
                         </div>
                     </>
             }
