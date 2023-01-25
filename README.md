@@ -31,11 +31,3 @@ npm run dev
 ## Información de contacto:
 Puede comunicarse conmigo por correo electrónico: rtanquiascornejo@gmail.com\
 O enviarme un mensaje en LinkedIn: https://www.linkedin.com/in/ramiro-tanquias/
-
-<!-- 
-    TODO:
-        1- RESPONSIVE
-        2- UN SOLO PERSONAJE APARECE
-        3- STYLES CHAR DETAIL 
-        4- LOADER
--->

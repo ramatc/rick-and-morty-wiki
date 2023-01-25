@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCharacterById } from '../../services/getCharacterById';
 import Loader from '../Loader';
+import './styles.css';
 
 const CharacterDetail = () => {
 
@@ -20,23 +21,22 @@ const CharacterDetail = () => {
         }, 750);
     }, [id]);
 
-    const { name, location, origin, gender, image, status, species } = character;
+    const { name, location, origin, gender, image, status, species, episode } = character;
 
     return (
         <>
             {loading
                 ? <Loader />
-                : <main className='main-container'>
-                    <h1>{name}</h1>
-                    <img src={image} alt={name} />
+                : <main className='main-container detail-character'>
+                    <img src={image} alt={name} className='detail-image' />
 
-                    <div>
-                        <p>Gender: {gender}</p>
-                        <p>Location: {location?.name}</p>
-                        <p>Origin: {origin?.name}</p>
-                        <p>Species: {species}</p>
-                        <p>Origin: {origin?.name}</p>
-                        <p>Status: {status}</p>
+                    <div className='detail-info'>
+                        <h1>{name} - <span className={`detail-status ${status}`}>{status}</span></h1>
+                        <p><span>Species:</span> {species}</p>
+                        <p><span>Gender:</span> {gender}</p>
+                        <p><span>First seen in:</span> {origin?.name}</p>
+                        <p><span>Last known location:</span> {location?.name}</p>
+                        <p><span>Appears in:</span> {episode?.length} episode(s)</p>
                     </div>
                 </main>
             }

@@ -9,6 +9,9 @@
     transition: all 100ms ease-in-out;
     -webkit-box-shadow: 0 1px 7px rgba(0,0,0,.05);
     -webkit-transition: all 100ms ease-in-out;
+    max-width: 429.750px;
+    max-height: 544.750px;
+    margin: 0 auto;
 }
 
 .character-card:hover {
@@ -47,16 +50,17 @@
     position: absolute;
     right: 10px;
     top: 10px;
+    text-transform: capitalize;
 }
 
-.alive {
-    background-color: #198754;
+.Alive {
+    background-color: rgb(85, 204, 68);;
 }
 
-.dead {
-    background-color: #dc3545;
+.Dead {
+    background-color: rgb(214, 61, 46);
 }
 
 .unknown {
-    background-color: #6c757d;
+    background-color: rgb(158, 158, 158);;
 }

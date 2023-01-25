@@ -32,6 +32,7 @@
     cursor: pointer;
     margin: 5px 0px;
     border: none;
+    text-transform: capitalize;
 }
 
 .filters-container button:hover {

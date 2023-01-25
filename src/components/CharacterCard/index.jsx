@@ -15,8 +15,8 @@ const CharacterCard = ({ id, image, name, species, status, location }) => {
                     <p className="fs-5">{location.name}</p>
                 </div>
 
-                <p className={`character-status ${status.toLowerCase()}`}>
-                    {status.toLowerCase()}
+                <p className={`character-status ${status}`}>
+                    {status}
                 </p>
             </div>
         </Link>
