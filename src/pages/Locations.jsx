@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Character from '../components/CharacterCard';
 import InputGroup from '../components/Filter/category/InputGroup';
 import Loader from '../components/Loader';
+import NotFound from '../components/NotFound';
 import { getLocationById, getLocationCount } from '../services/getLocation';
 
 const Locations = () => {
@@ -48,13 +49,13 @@ const Locations = () => {
                             </div>
                         </div>
 
-                        <div className='characters'>
-                            {locationCharacters.length > 0
-                                ? locationCharacters.map(character => <Character {...character} key={character.id} />)
-                                : 'No Characters Found :('
-                            }
-                        </div>
-
+                        {
+                            locationCharacters.length > 0
+                                ? <div className='characters'>
+                                    {locationCharacters.map(character => <Character {...character} key={character.id} />)}
+                                </div>
+                                : <NotFound />
+                        }
                     </>
             }
         </main>

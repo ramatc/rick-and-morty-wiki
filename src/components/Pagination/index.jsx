@@ -9,19 +9,23 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
 
     return (
         <>
-            <ReactPaginate
-                className='pagination'
-                nextLabel='Next'
-                previousLabel='Prev'
-                previousClassName='prev'
-                nextClassName='next'
-                activeClassName='active'
-                pageClassName='page-item'
-                pageLinkClassName='page-link'
-                forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
-                pageCount={info?.pages ?? 1}
-                onPageChange={handleChangePage}
-            />
+            {
+                info === undefined
+                    ? <></>
+                    : <ReactPaginate
+                        className='pagination'
+                        nextLabel='Next'
+                        previousLabel='Prev'
+                        previousClassName='prev'
+                        nextClassName='next'
+                        activeClassName='active'
+                        pageClassName='page-item'
+                        pageLinkClassName='page-link'
+                        forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
+                        pageCount={info?.pages ?? 1}
+                        onPageChange={handleChangePage}
+                    />
+            }
         </>
     )
 }

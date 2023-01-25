@@ -1,15 +1,19 @@
 import Character from '../CharacterCard';
+import NotFound from '../NotFound';
 import './styles.css';
 
 const CharacterList = ({ characters }) => {
 
     return (
-        <div className='characters'>
-            {characters
-                ? characters.map(character => <Character {...character} key={character.id} />)
-                : 'No Characters Found :('
+        <>
+            {
+                characters
+                    ? <div className='characters'>
+                        {characters.map(character => <Character {...character} key={character.id} />)}
+                    </div>
+                    : <NotFound />
             }
-        </div>
+        </>
     )
 }
 

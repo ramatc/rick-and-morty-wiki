@@ -38,5 +38,4 @@ O enviarme un mensaje en LinkedIn: https://www.linkedin.com/in/ramiro-tanquias/
         2- UN SOLO PERSONAJE APARECE
         3- STYLES CHAR DETAIL 
         4- LOADER
-        5- NO CHARACTER FOUND
 -->
