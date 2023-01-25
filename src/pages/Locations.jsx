@@ -35,25 +35,23 @@ const Locations = () => {
                 loading
                     ? <Loader />
                     : <>
-                        <div>
+                        <div className='info-container'>
                             <h2>Location: <span>{name === '' ? 'Unknown' : name}</span></h2>
-                            <h5>Dimension: {dimension === '' ? 'Unknown' : dimension}</h5>
-                            <h6>Type: {type === '' ? 'Unknown' : type}</h6>
+                            <h3>Dimension: <span>{dimension === '' ? 'Unknown' : dimension}</span></h3>
+                            <h3>Type: <span>{type === '' ? 'Unknown' : type}</span></h3>
                         </div>
 
                         <div>
                             <div>
-                                <h5>Pick Location</h5>
+                                <p>Pick Location</p>
                                 <InputGroup name='Location' setId={setNumber} total={total} />
                             </div>
 
-                            <div>
-                                <div className='characters'>
-                                    {locationCharacters.length > 0
-                                        ? locationCharacters.map(character => <Character {...character} key={character.id} />)
-                                        : 'No Characters Found :('
-                                    }
-                                </div>
+                            <div className='characters'>
+                                {locationCharacters.length > 0
+                                    ? locationCharacters.map(character => <Character {...character} key={character.id} />)
+                                    : 'No Characters Found :('
+                                }
                             </div>
                         </div>
                     </>

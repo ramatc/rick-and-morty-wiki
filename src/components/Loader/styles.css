@@ -11,9 +11,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-  }
+}
   
-  .loader::before {
+.loader::before {
     content: '';
     position: absolute;
     inset: 20px;
@@ -22,9 +22,9 @@
     border-radius: 50%;
     box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
     inset 5px 5px 35px rgba(0,0,0,0.25);
-  }
+}
   
-  .loader::after {
+.loader::after {
     content: '';
     position: absolute;
     width: 50px;
@@ -33,9 +33,9 @@
     border: 1px dashed#444;
     box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
     inset 5px 5px 35px rgba(0,0,0,0.25);
-  }
+}
   
-  .loader span {
+.loader span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,9 +45,9 @@
     transform-origin: top left;
     animation: radar81 2s linear infinite;
     border-top: 1px dashed #fff;
-  }
+}
   
-  .loader span::before {
+.loader span::before {
     content: '';
     position: absolute;
     top: 0;
@@ -58,14 +58,14 @@
     transform-origin: top left;
     transform: rotate(-55deg);
     filter: blur(30px) drop-shadow(20px 20px 20px seagreen);
-  }
+}
   
-  @keyframes radar81 {
+@keyframes radar81 {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}

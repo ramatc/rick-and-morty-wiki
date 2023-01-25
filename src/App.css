@@ -1,3 +1,13 @@
-h1 {
-    padding-bottom: 20px;
+.info-container {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.805);
+    font-size: 1.4rem;
+}
+
+.info-container span {
+    color: #f2f2f2;
+}
+
+.info-container h2 span {
+    color: #1cc49d;
 }

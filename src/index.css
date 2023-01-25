@@ -13,7 +13,6 @@ body {
     min-width: 320px;
 }
 
-@font-face {
-    font-family: Shlop;
-    src: url('./assets/fonts/shlop.ttf');
+h1 {
+    padding-bottom: 20px;
 }
