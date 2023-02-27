@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import debounce from 'just-debounce-it';
 import CharacterList from '../CharacterList';
 import Search from '../Search/';
 import Pagination from '../Pagination';
 import Filter from '../Filter';
 import Loader from '../Loader';
-import { getAllCharacters } from '../../services/getAllCharacters';
+import { getAllCharacters } from '../../services/getCharacters';
 import './styles.css';
 
 const CharacterListContainer = () => {
@@ -14,15 +15,20 @@ const CharacterListContainer = () => {
     const [filters, setFilters] = useState({ status: '', gender: '', species: '' });
     const [search, setSearch] = useState('');
 
-    useEffect(() => {
-        setLoading(true);
-
-        setTimeout(() => {
+    const debouncedGetMovies = useCallback(
+        debounce((pageNumber, search, filters) => {
             getAllCharacters(pageNumber, search, filters)
                 .then(data => setCharacters(data))
                 .catch(err => console.log(err))
                 .finally(() => setLoading(false));
-        }, 750)
+        }, 350)
+        , []);
+
+    useEffect(() => {
+        setLoading(true);
+
+        debouncedGetMovies(pageNumber, search, filters);
+
     }, [pageNumber, search, filters])
 
     const { info, results } = characters;

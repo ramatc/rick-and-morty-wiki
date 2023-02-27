@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCharacterById } from '../../services/getCharacterById';
+import { getCharacterById } from '../../services/getCharacters';
 import Loader from '../Loader';
 import './styles.css';
 

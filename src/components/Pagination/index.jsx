@@ -7,6 +7,13 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
         setPageNumber(data.selected + 1);
     }
 
+    const scrollTopOnClick = () => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <>
             {
@@ -24,6 +31,7 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
                         forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
                         pageCount={info?.pages ?? 1}
                         onPageChange={handleChangePage}
+                        onClick={scrollTopOnClick}
                     />
             }
         </>
