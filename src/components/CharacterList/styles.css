@@ -1,7 +1,7 @@
 .characters {
     display: grid;
     grid-template-columns: repeat(
-        auto-fit,
+        auto-fill,
         minmax(
             200px,
             1fr

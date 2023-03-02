@@ -24,3 +24,7 @@ li{
     font-weight: lighter;
     cursor: not-allowed;
 }
+
+.pagination li:hover{
+    color: #40b5cb !important;
+}
