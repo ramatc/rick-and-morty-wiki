@@ -4,9 +4,11 @@ import Gender from './category/Gender';
 import Species from './category/Species';
 import './styles.css';
 
+const matchMedia = window.matchMedia('(max-width: 768px)').matches;
+
 const Filter = ({ filters, setFilters, setPageNumber }) => {
 
-    const [display, setDisplay] = useState(false);
+    const [display, setDisplay] = useState(true);
 
     const handleClear = () => {
         setFilters({ status: '', gender: '', species: '' });
@@ -17,13 +19,15 @@ const Filter = ({ filters, setFilters, setPageNumber }) => {
         <>
             <h2
                 className='filter-title'
-                onClick={() => setDisplay(!display)}
+                onClick={matchMedia ? () => setDisplay(!display) : () => setDisplay(display)}
             >
                 Filters
-                <img src='https://icongr.am/fontawesome/arrow-down.svg?size=20&color=ffffff' />
+                {
+                    matchMedia && <img src={display ? 'https://icongr.am/fontawesome/arrow-down.svg?size=20&color=ffffff' : 'https://icongr.am/fontawesome/arrow-up.svg?size=20&color=ffffff'} />
+                }
             </h2>
 
-            <div>
+            <div className={matchMedia && display ? 'd-none' : ''}>
                 <div className='filters'>
                     <Status
                         setFilters={setFilters}
