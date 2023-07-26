@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { getCharacterById } from '../../services/getCharacters';
 import Loader from '../Loader';
 import './styles.css';
@@ -10,6 +10,8 @@ const CharacterDetail = () => {
     const [character, setCharacter] = useState({});
     const [loading, setLoading] = useState(false);
 
+    const navigate = useNavigate();
+    
     useEffect(() => {
         setLoading(true);
 
@@ -37,6 +39,7 @@ const CharacterDetail = () => {
                         <p><span>First seen in:</span> {origin?.name}</p>
                         <p><span>Last known location:</span> {location?.name}</p>
                         <p><span>Appears in:</span> {episode?.length} episode(s)</p>
+                        <button onClick={() => navigate(-1)} className='btn-back'>Go back</button>
                     </div>
                 </main>
             }
