@@ -1,10 +1,19 @@
 import { useState } from 'react';
-import Status from './category/Status';
-import Gender from './category/Gender';
-import Species from './category/Species';
+import FilterCategory from './category/FilterCategory';
 import './styles.css';
 
 const matchMedia = window.matchMedia('(max-width: 768px)').matches;
+
+const CATEGORIES = [
+    { title: 'Status', filterKey: 'status', values: ['alive', 'dead', 'unknown'] },
+    { title: 'Gender', filterKey: 'gender', values: ['female', 'male', 'genderless', 'unknown'] },
+    {
+        title: 'Species',
+        filterKey: 'species',
+        values: ['Human', 'Alien', 'Humanoid', 'Poopybutthole', 'Mythological',
+            'Unknown', 'Animal', 'Disease', 'Robot', 'Cronenberg', 'Planet'],
+    },
+];
 
 const Filter = ({ filters, setFilters, setPageNumber }) => {
 
@@ -29,21 +38,15 @@ const Filter = ({ filters, setFilters, setPageNumber }) => {
 
             <div className={matchMedia && display ? 'd-none' : ''}>
                 <div className='filters'>
-                    <Status
-                        setFilters={setFilters}
-                        setPageNumber={setPageNumber}
-                        {...filters}
-                    />
-                    <Gender
-                        setFilters={setFilters}
-                        setPageNumber={setPageNumber}
-                        {...filters}
-                    />
-                    <Species
-                        setFilters={setFilters}
-                        setPageNumber={setPageNumber}
-                        {...filters}
-                    />
+                    {CATEGORIES.map(category =>
+                        <FilterCategory
+                            key={category.filterKey}
+                            {...category}
+                            filters={filters}
+                            setFilters={setFilters}
+                            setPageNumber={setPageNumber}
+                        />
+                    )}
                 </div>
 
                 <button

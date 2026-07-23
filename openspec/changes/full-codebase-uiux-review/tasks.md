@@ -42,9 +42,9 @@ Chain strategy: pending
 
 ## Phase 2: FilterCategory Consolidation
 
-- [ ] 2.1 Create `src/components/Filter/category/FilterCategory.jsx` (props: `title`, `filterKey`, `values`, `filters`, `setFilters`, `setPageNumber`)
-- [ ] 2.2 Update `Filter/index.jsx` to render `FilterCategory` via a `CATEGORIES` config array; delete `Status.jsx`, `Gender.jsx`, `Species.jsx`
-- [ ] 2.3 Write `FilterCategory.test.jsx` — click sets correct filter key and resets page to 1
+- [x] 2.1 Create `src/components/Filter/category/FilterCategory.jsx` (props: `title`, `filterKey`, `values`, `filters`, `setFilters`, `setPageNumber`)
+- [x] 2.2 Update `Filter/index.jsx` to render `FilterCategory` via a `CATEGORIES` config array; delete `Status.jsx`, `Gender.jsx`, `Species.jsx`
+- [x] 2.3 Write `FilterCategory.test.jsx` — click sets correct filter key and resets page to 1
 
 ## Phase 3: Accessibility Fixes
 
