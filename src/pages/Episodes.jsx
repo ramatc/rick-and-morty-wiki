@@ -22,7 +22,7 @@ const Episodes = () => {
 
         getEpisodeCount(controller.signal)
             .then(res => setTotal(res))
-            .catch(err => { if (err.name !== 'AbortError') console.error(err); });
+            .catch(err => { if (err.name !== 'AbortError') setError(err); });
 
         return () => controller.abort();
     }, []);
