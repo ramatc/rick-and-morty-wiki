@@ -1,25 +1,17 @@
-export const getLocationById = async (number) => {
+import { apiFetch, apiFetchUrl } from './apiClient'
 
-    const API_KEY = `https://rickandmortyapi.com/api/location/${encodeURI(number)}`;
-    const resp = await fetch(API_KEY);
-    const data = await resp.json();
+export const getLocationById = async (number, signal) => {
+  const data = await apiFetch(`/location/${encodeURIComponent(number)}`, { signal })
 
-    const residents = await Promise.all(
-        data.residents.map((url) => {
-            return fetch(url).then((res) => res.json());
-        })
-    );
-    
-    const response = {data, residents}
+  const residents = await Promise.all(
+    data.residents.map((url) => apiFetchUrl(url, { signal }))
+  )
 
-    return response;
+  return { data, residents }
 }
 
-export const getLocationCount = async () => {
+export const getLocationCount = async (signal) => {
+  const data = await apiFetch('/location', { signal })
 
-    const API_KEY = `https://rickandmortyapi.com/api/location`;
-    const resp = await fetch(API_KEY);
-    const data = await resp.json();
-
-    return data.info.count;
+  return data.info.count
 }

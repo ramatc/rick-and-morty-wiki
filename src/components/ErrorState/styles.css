@@ -1,0 +1,58 @@
+.error-state {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: Roboto, sans-serif;
+    color: #fafafa;
+}
+
+.error-state-title {
+    margin-top: 24px;
+    font-size: 28px;
+    color: #e0564f;
+}
+
+.error-state-message {
+    margin-top: 12px;
+    font-size: 18px;
+    color: rgba(250, 250, 250, 0.72);
+}
+
+.error-state-action {
+    margin-top: 20px;
+}
+
+.error-state-action button {
+    cursor: pointer;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1cc49d;
+    color: #0e2a47;
+    font-size: 16px;
+}
+
+.error-state-hole {
+    background-color: #252525;
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform-origin: center;
+    border-radius: 50px;
+    box-shadow: inset 0px 0px 10px #e0564f,
+    inset 5px 5px 12px rgba(224, 86, 79, 0.8),
+    inset 8px 8px 1px rgba(255, 170, 165, 0.7),
+    0px 0px 1px rgba(255, 170, 165, 0.6);
+    animation: 1.2s linear infinite 0s running error-hole-spin;
+    margin: 0 auto;
+}
+
+.error-state-hole div {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+}
+
+@keyframes error-hole-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

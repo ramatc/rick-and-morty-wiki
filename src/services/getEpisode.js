@@ -1,25 +1,17 @@
-export const getEpisodeById = async (id) => {
+import { apiFetch, apiFetchUrl } from './apiClient'
 
-    const API_KEY = `https://rickandmortyapi.com/api/episode/${encodeURI(id)}`;
-    const resp = await fetch(API_KEY);
-    const data = await resp.json();
+export const getEpisodeById = async (id, signal) => {
+  const data = await apiFetch(`/episode/${encodeURIComponent(id)}`, { signal })
 
-    const characters = await Promise.all(
-        data.characters.map((url) => {
-            return fetch(url).then((res) => res.json());
-        })
-    );
-    
-    const response = {data, characters}
+  const characters = await Promise.all(
+    data.characters.map((url) => apiFetchUrl(url, { signal }))
+  )
 
-    return response;
+  return { data, characters }
 }
 
-export const getEpisodeCount = async () => {
+export const getEpisodeCount = async (signal) => {
+  const data = await apiFetch('/episode', { signal })
 
-    const API_KEY = `https://rickandmortyapi.com/api/episode`;
-    const resp = await fetch(API_KEY);
-    const data = await resp.json();
-
-    return data.info.count;
+  return data.info.count
 }
