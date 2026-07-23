@@ -1,31 +1,21 @@
-export const getAllCharacters = async (pageNumber, search, filters) => {
-    const { status, gender, species } = filters;
+import { apiFetch } from './apiClient'
 
-    try {
-        const API_KEY = `https://rickandmortyapi.com/api/character/?page=${encodeURI(pageNumber)}&name=${encodeURI(search)}&status=${encodeURI(status)}&gender=${encodeURI(gender)}&species=${encodeURI(species)}`;
-        const response = await fetch(API_KEY);
-        const json = await response.json();
+export const getAllCharacters = async (pageNumber, search, filters, signal) => {
+  const { status, gender, species } = filters
 
-        const data = json;
+  const query = new URLSearchParams({
+    page: pageNumber,
+    name: search,
+    status,
+    gender,
+    species,
+  }).toString()
 
-        return data;
-
-    } catch (error) {
-        throw new Error('Error searching characters');
-    }
+  return apiFetch(`/character/?${query}`, { signal })
 }
 
-export const getCharacterById = async (id) => {
-    if(id === '') return null;
+export const getCharacterById = async (id, signal) => {
+  if (id === '') return null
 
-    try {
-        const API_KEY = `https://rickandmortyapi.com/api/character/${encodeURI(id)}`;
-        const response = await fetch(API_KEY);
-        const data = await response.json();
-
-        return data;
-
-    } catch (error) {
-        throw new Error('Error searching character');
-    }
+  return apiFetch(`/character/${encodeURIComponent(id)}`, { signal })
 }
