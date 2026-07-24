@@ -1,11 +1,11 @@
 import './styles.css';
 
-const NotFound = () => {
+const NotFound = ({ message = 'No Characters Found' }) => {
     return (
         <>
             <div className='not-found'>
-                <span>No Characters Found </span>
-                <span>No Characters Found </span>
+                <span>{message}</span>
+                <span>{message}</span>
             </div>
 
             <div className='hole'>

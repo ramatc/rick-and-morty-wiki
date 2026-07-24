@@ -2,7 +2,7 @@ import Character from '../CharacterCard';
 import NotFound from '../NotFound';
 import './styles.css';
 
-const CharacterList = ({ characters }) => {
+const CharacterList = ({ characters, emptyMessage }) => {
 
     return (
         <>
@@ -11,7 +11,7 @@ const CharacterList = ({ characters }) => {
                     ? <div className='characters'>
                         {characters.map(character => <Character {...character} key={character.id} />)}
                     </div>
-                    : <NotFound />
+                    : <NotFound message={emptyMessage} />
             }
         </>
     )

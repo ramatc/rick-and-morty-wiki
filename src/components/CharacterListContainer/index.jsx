@@ -65,7 +65,14 @@ const CharacterListContainer = () => {
                             message='Something went wrong while reaching this dimension. Please try again.'
                         />
                         : <>
-                            <CharacterList characters={results} />
+                            <CharacterList
+                                characters={results}
+                                emptyMessage={
+                                    search || filters.status || filters.gender || filters.species
+                                        ? 'No characters match your search'
+                                        : 'No characters found in this dimension'
+                                }
+                            />
                             <Pagination
                                 info={info}
                                 pageNumber={pageNumber}
