@@ -25,6 +25,7 @@
     border-top-right-radius: 6px;
 }
 
+/* Top-left, not top-right: .character-status already occupies top-right. */
 .favorite-toggle {
     position: absolute;
     top: var(--space-2);
