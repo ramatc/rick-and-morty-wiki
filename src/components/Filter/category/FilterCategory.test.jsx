@@ -46,6 +46,14 @@ describe('FilterCategory', () => {
     expect(setPageNumber).toHaveBeenCalledWith(1)
   })
 
+  it('reflects the selected value with aria-pressed', () => {
+    renderCategory({ filters: { status: 'alive', gender: '', species: '' } })
+
+    expect(screen.getByRole('button', { name: 'alive' })).toHaveAttribute('aria-pressed', 'true')
+    expect(screen.getByRole('button', { name: 'dead' })).toHaveAttribute('aria-pressed', 'false')
+    expect(screen.getByRole('button', { name: 'unknown' })).toHaveAttribute('aria-pressed', 'false')
+  })
+
   it('applies the active-filter class only to the selected value', () => {
     renderCategory({ filters: { status: 'alive', gender: '', species: '' } })
 

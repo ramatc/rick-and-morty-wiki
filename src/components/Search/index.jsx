@@ -7,14 +7,17 @@ const Search = ({ setSearch, setPageNumber }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form role='search' onSubmit={handleSubmit}>
             <input
+                id='character-search'
+                name='q'
+                type='search'
+                aria-label='Search for characters'
                 onChange={(e) => {
                     setSearch(e.target.value);
                     setPageNumber(1);
                 }}
                 placeholder='Search for characters'
-                type='text'
             />
         </form>
     )

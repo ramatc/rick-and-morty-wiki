@@ -5,7 +5,7 @@ import './styles.css';
 const NavBar = () => {
     return (
         <header>
-            <nav>
+            <nav aria-label='Main'>
                 <div className='navbar'>
                     <Link to='/'>
                         <img src={logo} alt='Logo Rick and Morty' className='logo' />
@@ -15,6 +15,7 @@ const NavBar = () => {
                     <li><NavLink to='/'>Characters</NavLink></li>
                     <li><NavLink to='/episodes'>Episodes</NavLink></li>
                     <li><NavLink to='/locations'>Locations</NavLink></li>
+                    <li><NavLink to='/favorites'>Favorites</NavLink></li>
                 </ul>
             </nav>
         </header>

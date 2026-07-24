@@ -11,6 +11,7 @@ const FilterCategory = ({ title, filterKey, values, filters, setFilters, setPage
                             setFilters({ ...filters, [filterKey]: value });
                             setPageNumber(1);
                         }}
+                        aria-pressed={value === filters[filterKey]}
                         className={value === filters[filterKey] ? 'active-filter' : ''}
                     >
                         {value}
