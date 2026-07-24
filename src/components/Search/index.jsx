@@ -8,7 +8,7 @@ const Search = ({ setSearch, setPageNumber }) => {
 
     return (
         <form role='search' onSubmit={handleSubmit}>
-            <label htmlFor='character-search' className='visually-hidden'>Search for characters</label>
+            <label htmlFor='character-search' className='sr-only'>Search for characters</label>
             <input
                 id='character-search'
                 name='q'

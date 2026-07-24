@@ -16,7 +16,7 @@
 }
 
 .nav li a:hover{
-    color: #40b5cb;
+    color: var(--color-accent-500);
 }
 
 .nav{
@@ -35,5 +35,5 @@
 }
 
 .active{
-    color: #40b5cb !important;
+    color: var(--color-accent-500) !important;
 }

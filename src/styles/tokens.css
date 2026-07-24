@@ -1,0 +1,47 @@
+:root {
+    /* Brand / primary (teal-green) */
+    --color-primary-100: #d6f5ec;
+    --color-primary-300: #6fdcc0;
+    --color-primary-500: #1cc49d;   /* current primary */
+    --color-primary-700: #159a7b;
+    --color-primary-900: #0d6b55;
+
+    /* Secondary / accent (cyan) */
+    --color-accent-500: #40b5cb;    /* current accent */
+    --color-accent-300: #7fd0df;
+    --color-accent-700: #2c8697;
+
+    /* Neutral (surface = navy, text = near-white) */
+    --color-bg: #0e2a47;            /* body background base */
+    --color-surface: #14314f;
+    --color-surface-raised: #1b3b5e;
+    --color-text: #fafafa;
+    --color-text-muted: rgba(250, 250, 250, 0.72);
+    --color-border: rgba(250, 250, 250, 0.16);
+
+    /* Translucent overlays (from #17c3b227) */
+    --color-primary-alpha: rgba(28, 196, 157, 0.15);
+
+    /* Semantic status (align with character status colors) */
+    --color-status-alive: var(--color-primary-500);
+    --color-status-dead:  #e0564f;
+    --color-status-unknown: var(--color-text-muted);
+    --color-danger: #e0564f;
+    --color-focus: var(--color-accent-500);   /* focus ring */
+
+    /* Spacing scale (4px base) */
+    --space-1: 4px;  --space-2: 8px;  --space-3: 12px;
+    --space-4: 16px; --space-5: 24px; --space-6: 32px; --space-8: 48px;
+
+    /* Radius */
+    --radius-sm: 4px; --radius-md: 6px; --radius-lg: 12px;
+
+    /* Type scale */
+    --font-sans: 'Roboto', sans-serif;
+    --text-sm: 0.875rem; --text-base: 1rem; --text-lg: 1.25rem;
+    --text-xl: 1.5rem;   --text-2xl: 2rem;
+
+    /* Elevation */
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.35);
+    --shadow-focus: 0 0 0 3px var(--color-focus);
+}

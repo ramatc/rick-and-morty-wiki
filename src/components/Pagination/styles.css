@@ -16,8 +16,8 @@ li{
 
 .active{
     font-weight: bold;
-    color: #40b5cb;
-    border-bottom: 1px solid #40b5cb;
+    color: var(--color-accent-500);
+    border-bottom: 1px solid var(--color-accent-500);
 }
 
 .disabled{
@@ -26,5 +26,5 @@ li{
 }
 
 .pagination li:hover{
-    color: #40b5cb !important;
+    color: var(--color-accent-500) !important;
 }

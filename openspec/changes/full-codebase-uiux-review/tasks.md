@@ -57,9 +57,9 @@ Chain strategy: pending
 
 ## Phase 4: Visual Design System
 
-- [ ] 4.1 Create `src/styles/tokens.css` (color/spacing/type/radius/shadow custom properties, seeded from current palette)
-- [ ] 4.2 Import tokens once in `src/index.css`; add `.sr-only` utility and `:focus-visible` ring
-- [ ] 4.3 Migrate touched component `styles.css` files to `var(--...)` tokens (mechanical substitution, own commit)
+- [x] 4.1 Create `src/styles/tokens.css` (color/spacing/type/radius/shadow custom properties, seeded from current palette)
+- [x] 4.2 Import tokens once in `src/index.css`; add `.sr-only` utility and `:focus-visible` ring
+- [x] 4.3 Migrate touched component `styles.css` files to `var(--...)` tokens (mechanical substitution, own commit)
 - [ ] 4.4 Update `NotFound` with context-aware `message` prop; style `ErrorState` with `--color-danger` and hole/portal motif
 - [ ] 4.5 Add inline "searching…" indicator near search box during debounce
 

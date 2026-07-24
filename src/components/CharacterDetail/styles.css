@@ -1,6 +1,6 @@
 .detail-character {
-    background-color: #17c3b227;
-    border: 2px solid #fafafa;
+    background-color: var(--color-primary-alpha);
+    border: 2px solid var(--color-text);
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +11,7 @@
 .detail-image {
     width: 40%;
     object-fit: contain;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
 }
 
 .detail-info {
@@ -19,7 +19,7 @@
 }
 
 .detail-info h1 {
-    color: #1cc49d;
+    color: var(--color-primary-500);
     font-size: 2.8em;
 }
 
@@ -27,7 +27,7 @@
     border-radius: 5px;
     padding: 5px;
     font-size: 40px;
-    color: #fafafa !important;
+    color: var(--color-text) !important;
 }
 
 .detail-info p {
@@ -41,7 +41,7 @@
 }
 
 .btn-back {
-    color: #1cc49d;
+    color: var(--color-primary-500);
     background-color: #1b2f31;
     height: 3em;
     width: 100px;
