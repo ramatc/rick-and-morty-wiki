@@ -40,7 +40,7 @@ describe('CharacterDetail — error rendering', () => {
     const notFoundError = Object.assign(new Error('Request failed: 404'), {
       name: 'ApiError',
       status: 404,
-      notFound: true,
+      notFound: true
     })
     vi.spyOn(characterService, 'getCharacterById').mockRejectedValue(
       notFoundError
@@ -76,7 +76,7 @@ describe('CharacterDetail — favorite toggle', () => {
     gender: 'Male',
     origin: { name: 'Earth (C-137)' },
     location: { name: 'Citadel of Ricks' },
-    episode: ['ep-1'],
+    episode: ['ep-1']
   }
 
   it('toggles the character as a favorite from the detail view', async () => {

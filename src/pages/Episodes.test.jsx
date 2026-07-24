@@ -16,7 +16,7 @@ describe('Episodes page — fetch-in-render regression', () => {
 
     vi.spyOn(episodeService, 'getEpisodeById').mockResolvedValue({
       data: { name: 'Pilot', episode: 'S01E01', air_date: 'December 2, 2013' },
-      characters: [],
+      characters: []
     })
 
     render(
@@ -48,7 +48,7 @@ describe('Episodes page — fetch-in-render regression', () => {
     // Item fetch resolves so `loading` clears — isolating the count failure.
     vi.spyOn(episodeService, 'getEpisodeById').mockResolvedValue({
       data: { name: 'Pilot', episode: 'S01E01', air_date: 'December 2, 2013' },
-      characters: [],
+      characters: []
     })
 
     render(

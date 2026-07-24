@@ -28,7 +28,7 @@ describe('Favorites page', () => {
       STORAGE_KEY,
       JSON.stringify([
         { id: 1, name: 'Rick Sanchez', image: 'rick.png', species: 'Human', status: 'Alive', location: { name: 'Earth (C-137)' } },
-        { id: 2, name: 'Morty Smith', image: 'morty.png', species: 'Human', status: 'Alive', location: { name: 'Earth' } },
+        { id: 2, name: 'Morty Smith', image: 'morty.png', species: 'Human', status: 'Alive', location: { name: 'Earth' } }
       ])
     )
 

@@ -10,7 +10,7 @@ const baseCharacter = {
   image: 'rick.png',
   species: 'Human',
   status: 'Alive',
-  location: { name: 'Earth (C-137)' },
+  location: { name: 'Earth (C-137)' }
 }
 
 // The card is a <Link>; render it behind a router with a real detail route so
@@ -26,7 +26,7 @@ const renderCard = (overrides = {}) => {
           <Route path='/character/:id' element={<div>Detail Page</div>} />
         </Routes>
       </MemoryRouter>
-    ),
+    )
   }
 }
 

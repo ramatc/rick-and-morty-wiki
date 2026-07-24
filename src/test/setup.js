@@ -11,6 +11,6 @@ if (!window.matchMedia) {
     removeListener: () => {},
     addEventListener: () => {},
     removeEventListener: () => {},
-    dispatchEvent: () => false,
+    dispatchEvent: () => false
   })
 }

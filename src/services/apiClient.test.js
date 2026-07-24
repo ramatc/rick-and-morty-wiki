@@ -11,7 +11,7 @@ describe('apiClient', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: true,
       status: 200,
-      json: () => Promise.resolve(payload),
+      json: () => Promise.resolve(payload)
     }))
 
     const result = await apiFetch('/character/1')
@@ -24,13 +24,13 @@ describe('apiClient', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: false,
       status: 404,
-      json: () => Promise.resolve({ error: 'Character not found' }),
+      json: () => Promise.resolve({ error: 'Character not found' })
     }))
 
     await expect(apiFetch('/character/999999')).rejects.toMatchObject({
       name: 'ApiError',
       status: 404,
-      notFound: true,
+      notFound: true
     })
   })
 
@@ -38,7 +38,7 @@ describe('apiClient', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: false,
       status: 500,
-      json: () => Promise.resolve({}),
+      json: () => Promise.resolve({})
     }))
 
     const error = await apiFetch('/character/1').catch((e) => e)
@@ -53,7 +53,7 @@ describe('apiClient', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: true,
       status: 200,
-      json: () => Promise.resolve({}),
+      json: () => Promise.resolve({})
     }))
 
     await apiFetch('/episode', { signal: controller.signal })
@@ -65,7 +65,7 @@ describe('apiClient', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
       ok: true,
       status: 200,
-      json: () => Promise.resolve({ id: 2 }),
+      json: () => Promise.resolve({ id: 2 })
     }))
 
     const result = await apiFetchUrl('https://rickandmortyapi.com/api/character/2')

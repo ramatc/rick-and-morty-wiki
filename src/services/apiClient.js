@@ -16,7 +16,7 @@ export const apiFetch = async (path, { signal } = {}) => {
   if (!response.ok) {
     throw new ApiError(`Request failed: ${response.status}`, {
       status: response.status,
-      notFound: response.status === 404,
+      notFound: response.status === 404
     })
   }
 
@@ -31,7 +31,7 @@ export const apiFetchUrl = async (url, { signal } = {}) => {
   if (!response.ok) {
     throw new ApiError(`Request failed: ${response.status}`, {
       status: response.status,
-      notFound: response.status === 404,
+      notFound: response.status === 404
     })
   }
 

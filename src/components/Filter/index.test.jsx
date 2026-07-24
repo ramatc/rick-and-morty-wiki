@@ -5,7 +5,7 @@ import Filter from './index'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 vi.mock('../../hooks/useMediaQuery', () => ({
-  useMediaQuery: vi.fn(),
+  useMediaQuery: vi.fn()
 }))
 
 const renderFilter = () => {

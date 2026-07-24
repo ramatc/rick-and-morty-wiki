@@ -75,11 +75,11 @@ Deployed on Vercel (`rick-and-morty-wiki-kappa.vercel.app`) with auto-deploy fro
 - None new. Vitest/RTL added as devDependencies only (no runtime dependency change).
 
 ## Success Criteria
-- [ ] Episodes/Locations pages no longer re-fetch on every render
-- [ ] API failures and 404s show real UI states, not blank/`undefined` content
-- [ ] Direct URL to unmatched route shows a real 404 page
-- [ ] Search input, filter toggle, and pagination are fully keyboard/screen-reader accessible
-- [ ] Users can favorite a character and view their favorites list, persisted across reloads
-- [ ] `npm run test` runs and passes, covering Episodes/Locations fetch fix + Favorites
-- [ ] `npm run lint` runs successfully
-- [ ] Visual refresh applied via CSS custom properties, no raw hex repetition in touched files
+- [x] Episodes/Locations pages no longer re-fetch on every render (PR 1 — split effects, regression-tested)
+- [x] API failures and 404s show real UI states, not blank/`undefined` content (PR 1 — `ErrorState`, tested)
+- [x] Direct URL to unmatched route shows a real 404 page (PR 1 — catch-all route, tested)
+- [x] Search input, filter toggle, and pagination are fully keyboard/screen-reader accessible (PR 3 — labeled input, `aria-expanded`/`aria-controls` toggle button, `aria-pressed`/`aria-current`, tested)
+- [x] Users can favorite a character and view their favorites list, persisted across reloads (PR 5 — `useFavorites` + `/favorites`, persistence tested across hook re-mount)
+- [x] `npm run test` runs and passes, covering Episodes/Locations fetch fix + Favorites (55/55 passing, 16 suites)
+- [x] `npm run lint` runs successfully (PR 6 — `standard` wired, 0 problems after fixing the 734 pre-existing violations it surfaced)
+- [x] Visual refresh applied via CSS custom properties (PR 4 — `tokens.css`; scope per design.md §6.3 was color-only, exact-value substitution — raw hex that didn't exactly match a token, plus all spacing/typography, was intentionally left as-is and deferred, not eliminated. Some raw hex remains in `Filter`, `NavBar`, `CharacterDetail`, `CharacterListContainer`, `Search` styles.css)

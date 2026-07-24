@@ -13,7 +13,7 @@ const renderCategory = (overrides = {}) => {
     filters: { status: '', gender: '', species: '' },
     setFilters,
     setPageNumber,
-    ...overrides,
+    ...overrides
   }
   render(<FilterCategory {...props} />)
   return { setFilters, setPageNumber, props }
@@ -32,7 +32,7 @@ describe('FilterCategory', () => {
   it('sets the correct filter key and resets to page 1 on click', async () => {
     const user = userEvent.setup()
     const { setFilters, setPageNumber } = renderCategory({
-      filters: { status: '', gender: 'male', species: 'Human' },
+      filters: { status: '', gender: 'male', species: 'Human' }
     })
 
     await user.click(screen.getByRole('button', { name: 'dead' }))
@@ -41,7 +41,7 @@ describe('FilterCategory', () => {
     expect(setFilters).toHaveBeenCalledWith({
       status: 'dead',
       gender: 'male',
-      species: 'Human',
+      species: 'Human'
     })
     expect(setPageNumber).toHaveBeenCalledWith(1)
   })
@@ -68,7 +68,7 @@ describe('FilterCategory', () => {
       title: 'Gender',
       filterKey: 'gender',
       values: ['female', 'male', 'genderless', 'unknown'],
-      filters: { status: 'alive', gender: '', species: '' },
+      filters: { status: 'alive', gender: '', species: '' }
     })
 
     await user.click(screen.getByRole('button', { name: 'female' }))
@@ -76,7 +76,7 @@ describe('FilterCategory', () => {
     expect(setFilters).toHaveBeenCalledWith({
       status: 'alive',
       gender: 'female',
-      species: '',
+      species: ''
     })
     expect(setPageNumber).toHaveBeenCalledWith(1)
   })
