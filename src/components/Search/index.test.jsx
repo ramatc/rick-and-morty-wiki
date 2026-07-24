@@ -26,4 +26,16 @@ describe('Search', () => {
     expect(setSearch).toHaveBeenLastCalledWith('rick')
     expect(setPageNumber).toHaveBeenLastCalledWith(1)
   })
+
+  it('shows an inline searching indicator while a search is in flight', () => {
+    render(<Search setSearch={vi.fn()} setPageNumber={vi.fn()} searching />)
+
+    expect(screen.getByText(/searching/i)).toBeInTheDocument()
+  })
+
+  it('hides the searching indicator when idle', () => {
+    render(<Search setSearch={vi.fn()} setPageNumber={vi.fn()} />)
+
+    expect(screen.queryByText(/searching/i)).not.toBeInTheDocument()
+  })
 })

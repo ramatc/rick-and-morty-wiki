@@ -16,7 +16,7 @@
     height: 100%;
     padding: 10px 15px;
     width: 20%;
-    background-color: #17c3b227;
+    background-color: var(--color-primary-alpha);
     box-shadow: 0 0.1rem 0.8rem #000000;
 }
 

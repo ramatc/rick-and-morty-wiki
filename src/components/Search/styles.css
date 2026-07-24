@@ -1,19 +1,7 @@
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
 input {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(100, 150, 235, 0.3);
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     color: #fff;
     font-size: 1.4rem;
     font-weight: 600;
@@ -26,4 +14,19 @@ input:focus {
     background-color: rgba(100, 150, 235, 0.3);
     box-shadow: -5px -5px 25px rgba(30, 90, 150, 0.3), -5px 5px 30px rgba(10, 50, 250, 0.2), 7px -2px 30px rgba(50, 135, 190, 0.3);
     outline: none;
+}
+
+.search-indicator {
+    display: block;
+    min-height: var(--text-sm);
+    margin-top: var(--space-1);
+    padding-left: var(--space-1);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    font-style: italic;
+}
+
+.search-indicator[hidden] {
+    display: block;
+    visibility: hidden;
 }

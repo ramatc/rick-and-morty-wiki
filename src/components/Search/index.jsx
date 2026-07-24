@@ -1,6 +1,6 @@
 import './styles.css';
 
-const Search = ({ setSearch, setPageNumber }) => {
+const Search = ({ setSearch, setPageNumber, searching = false }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -8,7 +8,7 @@ const Search = ({ setSearch, setPageNumber }) => {
 
     return (
         <form role='search' onSubmit={handleSubmit}>
-            <label htmlFor='character-search' className='visually-hidden'>Search for characters</label>
+            <label htmlFor='character-search' className='sr-only'>Search for characters</label>
             <input
                 id='character-search'
                 name='q'
@@ -19,6 +19,14 @@ const Search = ({ setSearch, setPageNumber }) => {
                 }}
                 placeholder='Search for characters'
             />
+            <span
+                className='search-indicator'
+                role='status'
+                aria-live='polite'
+                hidden={!searching}
+            >
+                {searching ? 'Searching…' : ''}
+            </span>
         </form>
     )
 }

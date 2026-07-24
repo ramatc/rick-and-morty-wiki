@@ -23,7 +23,7 @@
 }
 
 .filters-container button {
-    color: #1cc49d;
+    color: var(--color-primary-500);
     background-color: #1b2f31;
     border-radius: 9px;
     height: 3em;
