@@ -65,11 +65,11 @@ Chain strategy: pending
 
 ## Phase 5: Favorites Feature
 
-- [ ] 5.1 Create `src/hooks/useFavorites.js` (localStorage-backed, `storage` event sync, defensive JSON parse)
-- [ ] 5.2 Add favorite toggle to `CharacterCard/index.jsx` (`preventDefault`/`stopPropagation`, `aria-pressed`)
-- [ ] 5.3 Add favorite toggle to `CharacterDetail/index.jsx`
-- [ ] 5.4 Create `src/pages/Favorites.jsx` + `/favorites` route in `App.jsx` (NavBar link done in 3.6)
-- [ ] 5.5 Write `useFavorites.test.js` + `CharacterCard.test.jsx` (add/remove, persistence, no-navigate on toggle)
+- [x] 5.1 Create `src/hooks/useFavorites.js` (localStorage-backed, `storage` event sync, defensive JSON parse)
+- [x] 5.2 Add favorite toggle to `CharacterCard/index.jsx` (`preventDefault`/`stopPropagation`, `aria-pressed`)
+- [x] 5.3 Add favorite toggle to `CharacterDetail/index.jsx`
+- [x] 5.4 Create `src/pages/Favorites.jsx` + `/favorites` route in `App.jsx` (NavBar link done in 3.6)
+- [x] 5.5 Write `useFavorites.test.js` + `CharacterCard.test.jsx` (add/remove, persistence, no-navigate on toggle)
 
 ## Phase 6: Finalization
 

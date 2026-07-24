@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getCharacterById } from '../../services/getCharacters';
+import { useFavorites } from '../../hooks/useFavorites';
 import Loader from '../Loader';
 import ErrorState from '../ErrorState';
 import './styles.css';
@@ -13,6 +14,7 @@ const CharacterDetail = () => {
     const [error, setError] = useState(null);
 
     const navigate = useNavigate();
+    const { isFavorite, toggleFavorite } = useFavorites();
 
     useEffect(() => {
         const controller = new AbortController();
@@ -28,6 +30,8 @@ const CharacterDetail = () => {
     }, [id]);
 
     const { name, location, origin, gender, image, status, species, episode } = character;
+
+    const favorite = isFavorite(character.id);
 
     if (loading) return <Loader />;
 
@@ -50,7 +54,18 @@ const CharacterDetail = () => {
             <img src={image} alt={name} className='detail-image' />
 
             <div className='detail-info'>
-                <h1>{name} - <span className={`detail-status ${status}`}>{status}</span></h1>
+                <div className='detail-heading'>
+                    <h1>{name} - <span className={`detail-status ${status}`}>{status}</span></h1>
+                    <button
+                        type='button'
+                        className='favorite-toggle favorite-toggle--detail'
+                        aria-pressed={favorite}
+                        aria-label={favorite ? 'Remove from favorites' : 'Add to favorites'}
+                        onClick={() => toggleFavorite(character)}
+                    >
+                        <span aria-hidden='true'>{favorite ? '★' : '☆'}</span>
+                    </button>
+                </div>
                 <p><span>Species:</span> {species}</p>
                 <p><span>Gender:</span> {gender}</p>
                 <p><span>First seen in:</span> {origin?.name}</p>

@@ -25,6 +25,36 @@
     border-top-right-radius: 6px;
 }
 
+/* Top-left, not top-right: .character-status already occupies top-right. */
+.favorite-toggle {
+    position: absolute;
+    top: var(--space-2);
+    left: var(--space-2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(14, 42, 71, 0.65);
+    color: var(--color-primary-500);
+    font-size: var(--text-lg);
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out, background-color 100ms ease-in-out;
+}
+
+.favorite-toggle:hover {
+    transform: scale(1.1);
+    background-color: rgba(14, 42, 71, 0.85);
+}
+
+.favorite-toggle[aria-pressed='true'] {
+    color: var(--color-status-dead);
+}
+
 .character-container{
     padding: 10px;
 }
