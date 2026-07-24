@@ -7,14 +7,17 @@ const Search = ({ setSearch, setPageNumber }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form role='search' onSubmit={handleSubmit}>
+            <label htmlFor='character-search' className='visually-hidden'>Search for characters</label>
             <input
+                id='character-search'
+                name='q'
+                type='search'
                 onChange={(e) => {
                     setSearch(e.target.value);
                     setPageNumber(1);
                 }}
                 placeholder='Search for characters'
-                type='text'
             />
         </form>
     )

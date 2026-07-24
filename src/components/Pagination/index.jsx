@@ -30,6 +30,10 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
                         pageLinkClassName='page-link'
                         forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
                         pageCount={info?.pages ?? 1}
+                        pageRangeDisplayed={2}
+                        marginPagesDisplayed={1}
+                        ariaLabelBuilder={(page, selected) =>
+                            selected ? `Page ${page}, current page` : `Go to page ${page}`}
                         onPageChange={handleChangePage}
                         onClick={scrollTopOnClick}
                     />

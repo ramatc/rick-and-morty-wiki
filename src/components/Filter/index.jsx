@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import FilterCategory from './category/FilterCategory';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import './styles.css';
-
-const matchMedia = window.matchMedia('(max-width: 768px)').matches;
 
 const CATEGORIES = [
     { title: 'Status', filterKey: 'status', values: ['alive', 'dead', 'unknown'] },
@@ -17,7 +16,8 @@ const CATEGORIES = [
 
 const Filter = ({ filters, setFilters, setPageNumber }) => {
 
-    const [display, setDisplay] = useState(true);
+    const isMobile = useMediaQuery('(max-width: 768px)');
+    const [collapsed, setCollapsed] = useState(false);
 
     const handleClear = () => {
         setFilters({ status: '', gender: '', species: '' });
@@ -26,17 +26,21 @@ const Filter = ({ filters, setFilters, setPageNumber }) => {
 
     return (
         <>
-            <h2
-                className='filter-title'
-                onClick={matchMedia ? () => setDisplay(!display) : () => setDisplay(display)}
-            >
-                Filters
-                {
-                    matchMedia && <img src={display ? 'https://icongr.am/fontawesome/arrow-down.svg?size=20&color=ffffff' : 'https://icongr.am/fontawesome/arrow-up.svg?size=20&color=ffffff'} />
-                }
-            </h2>
+            {isMobile
+                ? <button
+                    type='button'
+                    className='filter-title'
+                    aria-expanded={!collapsed}
+                    aria-controls='filter-panel'
+                    onClick={() => setCollapsed(current => !current)}
+                >
+                    Filters
+                    <span aria-hidden='true'>{collapsed ? ' ▾' : ' ▴'}</span>
+                </button>
+                : <h2 className='filter-title'>Filters</h2>
+            }
 
-            <div className={matchMedia && display ? 'd-none' : ''}>
+            <div id='filter-panel' hidden={isMobile && collapsed}>
                 <div className='filters'>
                     {CATEGORIES.map(category =>
                         <FilterCategory

@@ -48,12 +48,12 @@ Chain strategy: pending
 
 ## Phase 3: Accessibility Fixes
 
-- [ ] 3.1 `Search/index.jsx`: add `<label>`, `id`, `type='search'`, `role='search'` on form
-- [ ] 3.2 Create `src/hooks/useMediaQuery.js` (reactive `MediaQueryList` subscription)
-- [ ] 3.3 `Filter/index.jsx`: replace static `matchMedia` with `useMediaQuery`; replace `<h2 onClick>` with real `<button aria-expanded aria-controls>`; fix broken desktop no-op branch
-- [ ] 3.4 Add `aria-pressed` to `FilterCategory` option buttons
-- [ ] 3.5 `Pagination/index.jsx`: verify/set `aria-current`, `pageLabelBuilder`/`ariaLabel`, `pageRangeDisplayed`
-- [ ] 3.6 `NavBar/index.jsx`: confirm `aria-current='page'` on active `NavLink`, add `aria-label='Main'`, add `/favorites` link
+- [x] 3.1 `Search/index.jsx`: add `<label>`, `id`, `type='search'`, `role='search'` on form
+- [x] 3.2 Create `src/hooks/useMediaQuery.js` (reactive `MediaQueryList` subscription)
+- [x] 3.3 `Filter/index.jsx`: replace static `matchMedia` with `useMediaQuery`; replace `<h2 onClick>` with real `<button aria-expanded aria-controls>`; fix broken desktop no-op branch
+- [x] 3.4 Add `aria-pressed` to `FilterCategory` option buttons
+- [x] 3.5 `Pagination/index.jsx`: verify/set `aria-current`, `pageLabelBuilder`/`ariaLabel`, `pageRangeDisplayed`
+- [x] 3.6 `NavBar/index.jsx`: confirm `aria-current='page'` on active `NavLink`, add `aria-label='Main'`, add `/favorites` link
 
 ## Phase 4: Visual Design System
 
