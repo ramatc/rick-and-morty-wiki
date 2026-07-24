@@ -1,6 +1,6 @@
 import './styles.css';
 
-const Search = ({ setSearch, setPageNumber }) => {
+const Search = ({ setSearch, setPageNumber, searching = false }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,6 +19,14 @@ const Search = ({ setSearch, setPageNumber }) => {
                 }}
                 placeholder='Search for characters'
             />
+            <span
+                className='search-indicator'
+                role='status'
+                aria-live='polite'
+                hidden={!searching}
+            >
+                {searching ? 'Searching…' : ''}
+            </span>
         </form>
     )
 }

@@ -12,6 +12,7 @@ import './styles.css';
 const CharacterListContainer = () => {
     const [characters, setCharacters] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [searching, setSearching] = useState(false);
     const [error, setError] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
     const [filters, setFilters] = useState({ status: '', gender: '', species: '' });
@@ -22,13 +23,14 @@ const CharacterListContainer = () => {
             getAllCharacters(pageNumber, search, filters, signal)
                 .then(data => { setCharacters(data); setError(null); })
                 .catch(err => { if (err.name !== 'AbortError') setError(err); })
-                .finally(() => { if (!signal.aborted) setLoading(false); });
+                .finally(() => { if (!signal.aborted) { setLoading(false); setSearching(false); } });
         }, 350)
         , []);
 
     useEffect(() => {
         const controller = new AbortController();
         setLoading(true);
+        setSearching(true);
         setError(null);
 
         debouncedGetMovies(pageNumber, search, filters, controller.signal);
@@ -49,6 +51,7 @@ const CharacterListContainer = () => {
                 <Search
                     setSearch={setSearch}
                     setPageNumber={setPageNumber}
+                    searching={searching}
                 />
 
                 <Pagination
