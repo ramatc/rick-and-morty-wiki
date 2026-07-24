@@ -16,7 +16,7 @@ describe('Locations page — fetch-in-render regression', () => {
 
     vi.spyOn(locationService, 'getLocationById').mockResolvedValue({
       data: { name: 'Earth (C-137)', dimension: 'Dimension C-137', type: 'Planet' },
-      residents: [],
+      residents: []
     })
 
     render(
@@ -46,7 +46,7 @@ describe('Locations page — fetch-in-render regression', () => {
     // Item fetch resolves so `loading` clears — isolating the count failure.
     vi.spyOn(locationService, 'getLocationById').mockResolvedValue({
       data: { name: 'Earth (C-137)', dimension: 'Dimension C-137', type: 'Planet' },
-      residents: [],
+      residents: []
     })
 
     render(

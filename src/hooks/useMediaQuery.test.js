@@ -10,16 +10,16 @@ const createMatchMedia = (initialMatches) => {
     matches: initialMatches,
     media: '',
     onchange: null,
-    addEventListener: (_event, cb) => { listeners.push(cb) },
-    removeEventListener: (_event, cb) => { listeners = listeners.filter(l => l !== cb) },
+    addEventListener: (_event, listener) => { listeners.push(listener) },
+    removeEventListener: (_event, listener) => { listeners = listeners.filter(l => l !== listener) },
     addListener: () => {},
     removeListener: () => {},
     dispatchEvent: () => false,
     // Test-only helper to simulate a viewport change.
     _emit (matches) {
       mql.matches = matches
-      listeners.forEach(cb => cb({ matches }))
-    },
+      listeners.forEach(listener => listener({ matches }))
+    }
   }
   return mql
 }

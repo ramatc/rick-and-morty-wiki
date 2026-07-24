@@ -8,7 +8,7 @@ export const getAllCharacters = async (pageNumber, search, filters, signal) => {
     name: search,
     status,
     gender,
-    species,
+    species
   }).toString()
 
   return apiFetch(`/character/?${query}`, { signal })

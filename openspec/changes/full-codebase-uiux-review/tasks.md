@@ -73,5 +73,5 @@ Chain strategy: pending
 
 ## Phase 6: Finalization
 
-- [ ] 6.1 Wire `npm run lint` script using `standard` in `package.json`
-- [ ] 6.2 Manual verification against proposal's Success Criteria checklist
+- [x] 6.1 Wire `npm run lint` script using `standard` in `package.json`
+- [x] 6.2 Manual verification against proposal's Success Criteria checklist

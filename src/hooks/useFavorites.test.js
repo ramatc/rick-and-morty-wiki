@@ -15,7 +15,7 @@ const rick = {
   location: { name: 'Earth (C-137)' },
   gender: 'Male',
   origin: { name: 'Earth (C-137)' },
-  episode: ['ep-1', 'ep-2'],
+  episode: ['ep-1', 'ep-2']
 }
 
 const morty = {
@@ -24,7 +24,7 @@ const morty = {
   image: 'morty.png',
   species: 'Human',
   status: 'Alive',
-  location: { name: 'Earth' },
+  location: { name: 'Earth' }
 }
 
 describe('useFavorites', () => {
@@ -70,7 +70,7 @@ describe('useFavorites', () => {
       image: 'rick.png',
       species: 'Human',
       status: 'Alive',
-      location: { name: 'Earth (C-137)' },
+      location: { name: 'Earth (C-137)' }
     })
     expect(result.current.favorites[0]).not.toHaveProperty('gender')
     expect(result.current.favorites[0]).not.toHaveProperty('episode')
@@ -90,8 +90,8 @@ describe('useFavorites', () => {
         image: 'morty.png',
         species: 'Human',
         status: 'Alive',
-        location: { name: 'Earth' },
-      },
+        location: { name: 'Earth' }
+      }
     ])
   })
 
@@ -129,13 +129,13 @@ describe('useFavorites', () => {
           image: 'rick.png',
           species: 'Human',
           status: 'Alive',
-          location: { name: 'Earth (C-137)' },
-        },
+          location: { name: 'Earth (C-137)' }
+        }
       ])
     )
 
     act(() => {
-      window.dispatchEvent(new StorageEvent('storage', { key: STORAGE_KEY }))
+      window.dispatchEvent(new window.StorageEvent('storage', { key: STORAGE_KEY }))
     })
 
     expect(result.current.isFavorite(1)).toBe(true)
