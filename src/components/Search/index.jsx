@@ -8,11 +8,11 @@ const Search = ({ setSearch, setPageNumber }) => {
 
     return (
         <form role='search' onSubmit={handleSubmit}>
+            <label htmlFor='character-search' className='visually-hidden'>Search for characters</label>
             <input
                 id='character-search'
                 name='q'
                 type='search'
-                aria-label='Search for characters'
                 onChange={(e) => {
                     setSearch(e.target.value);
                     setPageNumber(1);
