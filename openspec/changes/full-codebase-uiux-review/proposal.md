@@ -82,4 +82,4 @@ Deployed on Vercel (`rick-and-morty-wiki-kappa.vercel.app`) with auto-deploy fro
 - [x] Users can favorite a character and view their favorites list, persisted across reloads (PR 5 — `useFavorites` + `/favorites`, persistence tested across hook re-mount)
 - [x] `npm run test` runs and passes, covering Episodes/Locations fetch fix + Favorites (55/55 passing, 16 suites)
 - [x] `npm run lint` runs successfully (PR 6 — `standard` wired, 0 problems after fixing the 734 pre-existing violations it surfaced)
-- [x] Visual refresh applied via CSS custom properties, no raw hex repetition in touched files (PR 4 — `tokens.css`; spacing/typography tokenization for touched files deferred as a documented follow-up, see design.md §6.3 scope note)
+- [x] Visual refresh applied via CSS custom properties (PR 4 — `tokens.css`; scope per design.md §6.3 was color-only, exact-value substitution — raw hex that didn't exactly match a token, plus all spacing/typography, was intentionally left as-is and deferred, not eliminated. Some raw hex remains in `Filter`, `NavBar`, `CharacterDetail`, `CharacterListContainer`, `Search` styles.css)
